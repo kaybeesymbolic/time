@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -49,10 +48,4 @@ func (kb *KbTime) Date() (year int, month time.Month, day int) {
 func (kb *KbTime) TimeElapsed() time.Duration {
 	duration := time.Since(kb.Time)
 	return duration
-}
-
-func main() {
-	kb := New()
-	fmt.Println(kb.Clock())
-	fmt.Println(kb.Date())
 }
